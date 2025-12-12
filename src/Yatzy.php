@@ -104,7 +104,7 @@ class Yatzy // Naming not good. You need to use PascaleCase
         return $sum;
     }
 
-    public function Fives(): int //Naming convention
+    public function fives(): int //Naming convention
     {
         $s = 0;
         $i = 0;
