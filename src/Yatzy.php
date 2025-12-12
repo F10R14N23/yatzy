@@ -143,17 +143,6 @@ class Yatzy // Naming not good. You need to use PascaleCase
         return $sum;
     }
 
-    public function sevens(): int //Function not called. Useless.
-    {
-        $sum = 0;
-        for ($at = 0; $at < 5; $at++) {
-            if ($this->dice[$at] === 7) {
-                $sum = $sum + 7;
-            }
-        }
-        return $sum;
-    }
-
     public function score_pair(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $counts = array_fill(0, 6, 0);
