@@ -4,22 +4,24 @@ declare(strict_types=1);
 
 namespace Yatzy;
 
-class yatzy
+class yatzy // Naming not good. You need to use PascaleCase
 {
     /**
      * @var array<int, int>
      */
     private array $dice;
 
-    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5)
+
+    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5) //not uniform on $_5
     {
         $this->dice = array_fill(0, 5, 0);
         $this->dice[0] = $d1;
         $this->dice[1] = $d2;
         $this->dice[2] = $d3;
         $this->dice[3] = $d4;
-        $this->dice[4] = $_5;
+        $this->dice[4] = $_5; //Still not uniform
     }
+
 
     public static function chance(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
@@ -49,21 +51,6 @@ class yatzy
         return 0;
     }
 
-    /*public static function oldYatzyScore(array $dice): int
-    {
-        // Etait buggé...
-        $counts = array_fill(0, 5, 0);
-        foreach ($dice as $die) {
-            ++$counts[$die - 1];
-        }
-        foreach (range(0, count($counts) - 1) as $i) {
-            if ($counts[$i] === 5) {
-                return 50;
-            }
-        }
-        return 0;
-    }*/
-
     public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
@@ -79,7 +66,7 @@ class yatzy
         if ($d4 === 1) {
             ++$sum;
         }
-        if ($d5 === 1) {
+        if ($d5 === 1) { // Duplicate the "if" statement three times.
             ++$sum;
         }
 
@@ -95,7 +82,7 @@ class yatzy
         if ($d2 === 2) {
             $sum += 2;
         }
-        if ($d3 === 2) {
+        if ($d3 === 2) { // Duplicate the "if" statement three times.
             $sum += 2;
         }
         if ($d4 === 2) {
@@ -120,7 +107,7 @@ class yatzy
         if ($d3 === 3) {
             $s += 3;
         }
-        if ($d4 === 3) {
+        if ($d4 === 3) { // Duplicate the "if" statement three times.
             $s += 3;
         }
         if ($d5 === 3) {
@@ -141,7 +128,7 @@ class yatzy
         return $sum;
     }
 
-    public function Fives(): int
+    public function Fives(): int //Naming convention
     {
         $s = 0;
         $i = 0;
@@ -164,7 +151,7 @@ class yatzy
         return $sum;
     }
 
-    public function sevens(): int
+    public function sevens(): int //Function not called. Useless.
     {
         $sum = 0;
         for ($at = 0; $at < 5; $at++) {
