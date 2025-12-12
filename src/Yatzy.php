@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Yatzy;
 
-class yatzy // Naming not good. You need to use PascaleCase
+class Yatzy // Naming not good. You need to use PascaleCase
 {
     /**
      * @var array<int, int>
@@ -12,14 +12,14 @@ class yatzy // Naming not good. You need to use PascaleCase
     private array $dice;
 
 
-    public function __construct(int $d1, int $d2, int $d3, int $d4, int $_5) //not uniform on $_5
+    public function __construct(int $d1, int $d2, int $d3, int $d4, int $d5) //not uniform on $_5
     {
         $this->dice = array_fill(0, 5, 0);
         $this->dice[0] = $d1;
         $this->dice[1] = $d2;
         $this->dice[2] = $d3;
         $this->dice[3] = $d4;
-        $this->dice[4] = $_5; //Still not uniform
+        $this->dice[4] = $d5; //Still not uniform
     }
 
 
