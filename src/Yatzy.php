@@ -51,23 +51,15 @@ class Yatzy // Naming not good. You need to use PascaleCase
         return 0;
     }
 
-    public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public static function onesw(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
-        if ($d1 === 1) {
-            ++$sum;
-        }
-        if ($d2 === 1) {
-            ++$sum;
-        }
-        if ($d3 === 1) {
-            ++$sum;
-        }
-        if ($d4 === 1) {
-            ++$sum;
-        }
-        if ($d5 === 1) { // Duplicate the "if" statement three times.
-            ++$sum;
+        $dice = [$d1, $d2, $d3, $d4, $d5];
+
+        foreach ($dice as $d) {
+            if ($d === 1) {
+                $sum++;
+            }
         }
 
         return $sum;
