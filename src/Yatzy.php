@@ -107,7 +107,6 @@ class Yatzy // Naming not good. You need to use PascaleCase
     public function fives(): int //Naming convention
     {
         $s = 0;
-        $i = 0;
         for ($i = 0; $i < 5; $i++) {
             if ($this->dice[$i] === 5) {
                 $s = $s + 5;
