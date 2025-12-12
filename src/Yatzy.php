@@ -51,7 +51,7 @@ class Yatzy // Naming not good. You need to use PascaleCase
         return 0;
     }
 
-    public static function onesw(int $d1, int $d2, int $d3, int $d4, int $d5): int
+    public static function ones(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
         $dice = [$d1, $d2, $d3, $d4, $d5];
