@@ -68,20 +68,12 @@ class Yatzy // Naming not good. You need to use PascaleCase
     public static function twos(int $d1, int $d2, int $d3, int $d4, int $d5): int
     {
         $sum = 0;
-        if ($d1 === 2) {
-            $sum += 2;
-        }
-        if ($d2 === 2) {
-            $sum += 2;
-        }
-        if ($d3 === 2) { // Duplicate the "if" statement three times.
-            $sum += 2;
-        }
-        if ($d4 === 2) {
-            $sum += 2;
-        }
-        if ($d5 === 2) {
-            $sum += 2;
+        $dice = [$d1, $d2, $d3, $d4, $d5];
+
+        foreach ($dice as $d) {
+            if ($d === 2) {
+                $sum += 2;
+            }
         }
 
         return $sum;
